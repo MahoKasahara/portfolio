@@ -1,0 +1,247 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.right{
+    text-align: right;
+    font-size: 14px;
+}
+
+
+
+.container{
+   margin-left: 80px;
+   margin-right: 80px;
+   display: flex; 
+   flex-wrap: wrap;
+   justify-content: center;
+   text-align: center;    
+}
+
+/*　posts/new対応　*/
+
+.form_card{
+    margin-top: 110px;
+    border: 1px solid;
+    border-color: #F2F2F2;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    width: 500px;
+    height: 500px;
+    border-radius : 10px;  
+    position: relative;
+}
+
+.subject p{
+    font-size: 30px;
+    font-weight: 300px;
+    position: absolute;
+    top: 5px;
+    left: 200px;
+    
+    
+}
+
+
+
+.post_form{
+    border: 1px solid;
+    border-color: #F2F2F2;
+    border-radius : 3px; 
+}
+
+.post_title{
+    position: absolute;
+    top: 110px;
+    left: 40px;
+    width: 80%;
+    height: 32px;
+    margin-bottom: 25px;
+    
+    padding-top: 0px;
+}
+
+.post_content{
+    position: absolute;
+    top: 170px;
+    left: 40px;
+    height: 150px;
+    width: 80%;
+}
+
+::placeholder {
+  font-weight: thin;
+  font-family: sans-serif;
+  font-size: 1.1em;
+}
+
+.image_field{
+    position: absolute;
+    top: 350px;
+    left: 40px;
+}
+
+.submit_btn{
+   position: absolute;
+   top: 440px;
+   left: 200px;
+   background: #1155FF;
+   width :110px;
+   height :40px;
+   border-radius: 35px;
+   border: none;
+   color: white;
+   font-size : 16px;
+   margin-bottom: 10px;    
+}
+
+/* posts/show.html対応 ＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠*/
+
+.show_post{
+    margin:0 auto;
+    margin-top: 90px;
+    margin-bottom: 20px;
+    border: 1px solid;
+    border-color: #F2F2F2;
+    padding-top: 3px;
+    padding-bottom: 15px;
+    width: 530px;
+    height: 100%;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 10px 10px 25px #BFBFBF;
+}
+
+
+.posted_user_img{
+    margin: 20px 20px 0px 35px;
+}
+
+.user_small_img{
+    width: 38px;
+    height: 38px;
+    border: 1px solid;
+    border-color: #dcdcdc;
+    
+}
+
+.posted_user_name{
+    position: relative;
+    left: 90px;
+    bottom: 43px;
+}
+
+.postuser_name{
+    font-size: 20px;
+    color: black;
+}
+
+.show_posted_photo_div{
+    position: relative;
+    bottom: 30px;
+
+    
+}
+
+.show_posted_photo{
+    width: 100%;
+    height: 100%;
+}
+
+.string{
+   position: relative;
+   left: 40px;
+   bottom: 20px;
+   font-size: 13px;
+   
+}
+
+.posted_title{
+    font-weight: bolder;
+}
+
+
+.posted_time{
+    text-align: right;
+    font-size: 14px;
+    padding-right: 36px;
+    padding-bottom: 10px;
+}
+
+.edit_button{
+   position: relative;
+   left: 460px;
+   background-color: white;
+   width :45px;
+   height :28px;
+   border: none;
+   border-color: #1DA1F2;
+   color: #1DA1F2;
+   font-size : 14px;
+}
+
+/*post/index.html対応　｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜*/
+
+.feed_post{
+    margin:0 auto;
+    margin-top: 100px;
+    margin-bottom: 40px;
+    border: 1px solid;
+    border-color: #F2F2F2;
+    padding-top: 3px;
+    padding-bottom: 15px;
+    width: 500px;
+    height: 100%;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+}
+
+.image_area{
+    margin-top: 30px;
+    margin-bottom: 3px;   
+}
+
+.feed_photo{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0px;
+    
+}
+
+.feed_userimg{
+    padding: 1px;
+    border: 1px solid;
+    border-color: rgb(240,240,240);
+    width: 35px;
+    height: 35px;
+    
+}
+
+.nm{
+    font-size: 15px;
+    color: black;
+    
+    }
+
+.feed_right{
+    text-align: right;
+    font-size: 13px;
+    padding-right: 30px;
+    padding-bottom: 5px;
+    
+}
+
+.errordisplay{
+    margin: 75px 0px 0px 50px;
+    border: 1px solid grey;
+    font-size: 10px;
+    border-radius: 10px;
+    width: 450px;
+    background-color: rgba(138, 138, 138, .5);
+}
+
+.errordisplay h2{
+    font-size: 10px;
+}
+
+

@@ -1,0 +1,219 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+a {
+  text-decoration: none;
+}
+
+ul{
+  list-style: none;
+}
+
+
+.notification:not(:last-child){
+	margin-bottom: 0;
+}
+
+.profile_image{
+    border-radius: 50%;
+}
+
+body{
+  margin: 0;
+}
+
+/*　　　　　　　　　ナビゲーション　　　　　　　　　　　*/
+
+nav{
+  height: 70px;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+  position: fixed;
+  top: 0px;
+  background-color: rgba(250, 250, 250, 0.8);
+  z-index: 999;
+}
+
+.nav-logo{
+  margin-top: 3px;
+  width: 65px;
+}
+
+
+.space-between{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 50px;
+}
+
+
+.nav-icons{
+  display: inline-flex;
+  align-content: space-around;
+  margin-right: 20px;
+  
+}
+
+.nav_icon{
+  
+  color: #001C53;
+  font-size: 20px;
+  margin-top: 8px;
+}
+
+.nav_icon:hover{
+  color: #1155FF;
+}
+
+.switching{
+  margin-right: 50px;
+}
+
+.torio{
+  margin-left: 10px;
+}
+
+
+/*ドロップダウンメニュー*/
+
+.dropdown-menu{
+  width: 200px;
+  height: 250px;
+  z-index: 999;
+  background-color: white;
+  padding: 0px;
+  position: fixed;
+  top: 71px;
+  right: 1px;
+  background: rgba( 250, 250, 250, 0.8);
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+  display: none;
+}
+
+.dropdown-menu p{
+  margin: 0px;
+  color: rgba( 24, 27, 34, 0.9);
+  font-size: 15px;
+  font-weight: thin;
+}
+
+.dropdown-menu .posts-stage{
+  position: absolute;
+  top: -6px;
+}
+
+.dropdown-menu .user-stage{
+  position: absolute;
+  top: 40px;
+}
+
+.dropdown-menu .new-post-stage{
+  position: absolute;
+  top: 87px;
+}
+
+.dropdown-menu .users-stage{
+  position: absolute;
+  top: 160px;
+}
+
+.dropdown-menu .logout-stage{
+  position: absolute;
+  top: 190px;
+}
+
+.dropdown-menu p:hover{
+  color: #1155FF;
+}
+
+.border_logout{
+  margin: 0px;
+  position: absolute;
+  top: 200px;
+  right: -1px;
+  border: thin solid #dbdbdb;
+  width: 200px; 
+}
+
+#check:checked ~ .dropdown-menu{
+    display: block;
+  }
+  
+#check:checked ~ label #cancel{
+    display: block;
+  }
+
+
+/*一旦非表示*/
+
+#berger{
+  color: #001C53;
+  float: right;
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  font-size: 35px;
+  
+  
+}
+
+#cancel{
+  color: grey;
+  float: right;
+  position: absolute;
+  top: 77px;
+  right: 10px;
+  z-index: 1000;
+  display: none;
+}
+
+
+.none{
+  display: none;
+}
+
+
+
+@media (max-width:750px){
+  .switching {
+    visibility: hidden;
+  }
+  
+  
+    
+  .space-between{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 30px;
+   }
+   
+}
+
+.notice{
+  text-aligh: center;
+  margin-top: 71px;
+  font-size: 15px;
+  color: white;
+  background-color: rgba(84, 84, 84, .4);
+}
+
+.alert{
+  margin-top: 71px;
+  font-size: 15px;
+  color: white;
+  background-color: rgba(255, 25, 0, .7);
+}

@@ -1,0 +1,58 @@
+<div class="show_post">
+    
+     
+        <div>
+          <figure class="posted_user_img">
+           <%= link_to user_path(@post.user.id) do %>
+            <%= attachment_image_tag @post.user, :profile_image, fallback: "default.png", class: "user_small_img" %>
+           <% end %>
+          </figure>
+        </div>
+  
+        <div class="posted_user_name"> 
+            
+              <%= link_to user_path(@post.user), class: "postuser_name" do %>
+               <%= @post.user.username %>
+              <% end %>
+             
+        </div>
+      
+    
+
+          <div class="show_posted_photo_div">
+              <figure>
+                <%= attachment_image_tag @post, :image, class: "show_posted_photo" %>
+              </figure>
+          </div>
+          
+          
+          
+     <div class="string"> 
+     
+           <div class="posted_title">
+             <%= @post.title %>
+           </div>
+
+           <div class="posted_content">
+             <%= simple_format @post.body %>
+           </div>
+           
+     </div>
+     
+         <div class="posted_time">
+           <time><%= @post.updated_at.strftime("%Y-%m-%d %H:%M") %></time>
+        </div>
+
+     
+      <div>
+        <% if @post.user.id == current_user.id %>
+             
+             <%= link_to edit_post_path(@post) do %>
+                 <button class="edit_button">編集</button>
+             <% end %>
+        <% end %>
+      </div>
+      
+</div>
+
+

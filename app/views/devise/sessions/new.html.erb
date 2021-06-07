@@ -1,0 +1,44 @@
+<div class="loginbox">
+  <div class="left">
+    
+     <h2>Photo Upにログイン</h2>
+   
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="field">
+    <div class="box_title">
+    <%= f.label :email, "eメール" %><br />
+    </div>
+     <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "entry_field" %>
+    
+  </div>
+
+  <div class="field">
+    <div class="box_title">
+    <%= f.label :password, "パスワード" %>
+    </div>
+    
+     <%= f.password_field :password, autocomplete: "current-password", class: "entry_field" %>
+   
+  </div>
+
+  <% if devise_mapping.rememberable? %>
+    <div class="field">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me, "ログインしたままにする" %>
+    </div>
+  <% end %>
+
+   <div class="center_btn">
+    <%= f.submit "ログイン", class: "btn" %>
+   
+   
+<% end %>
+
+<div class="other">
+<%= link_to "パスワードを忘れた場合", new_user_password_path %><br />
+<%= link_to "アカウントを作成", new_user_registration_path %>
+</div>
+</div>
+  </div>
+</div>

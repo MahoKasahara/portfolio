@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Photo up</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha256-UzFD2WYH2U1dQpKDjjZK72VtPeWP50NoJjd26rnAdUI=" crossorigin="anonymous" />
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://kit.fontawesome.com/41c3351b4c.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+  </head>
+
+  <body>
+    <% if flash[:notice] %>
+      <div class="notification is-info">
+       <p class="notice"><%= notice %></p>
+      </div>
+    <% end %>
+    
+    
+    <% if flash[:alert] %>
+     <div class="notification is-danger">
+      <p class="alert"><%= alert %></p>
+     </div>
+    <% end %>
+ 
+<!-- ナビゲーション -->
+
+    <nav>
+     <div class="space-between"> 
+      <div>
+        <%= link_to root_path do %>
+         <img class="nav-logo" src="/assets/navigation-logo.png">
+        <% end %>
+      </div>
+      
+      <div>
+       <% if user_signed_in? %>
+      
+            <ul class="nav-icons">
+                 <li class="switching torio">
+                    <%= link_to posts_path do %>
+                       <i class="fas fa-globe nav_icon"></i>
+                    <% end %>
+                 </li>
+                
+                 <li class="switching torio">
+                  <%= link_to new_post_path do %>
+                        <i class="far fa-plus-square nav_icon"></i>
+                  <% end %>
+                 </li>
+                    
+                 <li class="switching torio">
+                   <%= link_to users_path do %>
+                      <i class="fas fa-users nav_icon"></i>
+                   <% end %>
+                 </li>
+        
+                 <li class="switching">
+                     <%= link_to user_path(current_user) do %>
+                    　<i class="fas fa-house-user nav_icon last-icon"></i>
+                    <% end %>
+                  </li>  
+             </ul>
+          </div>
+        </div>
+        
+        <input class="none" type="checkbox" id="check">
+         <label for="check">
+          <i class="fas fa-bars" id="berger"></i>
+          <i class="fas fa-window-close" id="cancel"></i>
+         </label>
+                 
+                 <div class="dropdown-menu"> 
+                   <ul>
+                       <li class="posts-stage">
+                    　　　<%= link_to posts_path do %>
+                              <p>投稿を見る</p>
+                    　　　<% end %>
+                 　　　</li>
+                 　　　
+                 　　　<li class="user-stage">
+                 　　    　  <%= link_to user_path(current_user) do %>
+                    　　　　　　　<p>マイページ</p>   
+                          <% end %>
+                        </li>
+                        
+                        <li class="new-post-stage">
+                            <%= link_to new_post_path do %>
+                       　　　     <p>投稿する</p>
+                            <% end %>
+                        </li>
+                       
+                       <li class="users-stage">
+                            <%= link_to users_path do %>
+                               <p>ユーザーページ</p>
+                            <% end %>
+                       </li>
+                       
+                       <div class="border_logout"></div>
+                       
+                       <li class="logout-stage">
+                            <%= link_to destroy_user_session_path, method: :delete do %>
+                            　<p>ログアウト</p>
+                            <% end %>
+                        </li>
+                   </ul>
+                 </div>
+        
+        </nav>
+                
+        
+        
+             
+               
+         <% end %>
+    </div>
+      
+    <%= yield %>
+  </body>
+</html>

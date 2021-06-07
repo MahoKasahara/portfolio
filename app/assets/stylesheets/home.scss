@@ -1,0 +1,71 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+.before_login{
+    margin-top: 130px;
+    margin-bottom: 1000px;
+    text-align: center;
+    overflow: scroll;
+    height: 80vh;
+}
+
+.before_login li{
+   list-style: none; 
+}
+
+.home-logo{
+    margin-bottom: 70px;
+    width: 500px;
+}
+
+.before_login button {
+   margin-top: 15px;
+   border-radius: 50px;
+   width :250px;
+   height :50px;
+}
+
+.signin{
+    background: #1155FF;
+    opacity: 0.9;
+    color: white;
+    border: none;
+    margin-bottom: 13px;
+}
+
+.login{
+    color: #1155FF;
+    border: 1px solid #1155FF;
+    border-width : thin;
+    background: transparent; 
+}
+
+
+.before_login button {
+    
+    font-size: 17px;
+}
+
+.before_login button:hover {
+    opacity: 0.5;
+}
+
+.prompt-posts{
+   display: flex; 
+   flex-wrap: wrap;
+   justify-content: center;
+   text-align: center; 
+   
+}
+
+.look{
+    margin-top: 45px;
+    
+}
+
+.look a{
+    color: #1155FF;
+}

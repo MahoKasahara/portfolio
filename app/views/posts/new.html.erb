@@ -1,0 +1,41 @@
+<% if @post.errors.any? %>
+<div class="errordisplay">
+     <h2><%= pluralize(@post.errors.count, "error")%>prohibited this object from being saved: not successfully</h2>
+      <ul>
+      <% @post.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<div class = "container">
+    <div class = "form_card">
+        
+　　    <div class = "subject">
+　　        <p>新規投稿</p>
+　　    </div>
+　　    
+        <%= form_for @post do |f| %>
+    
+    
+    <div class="form-group">
+        <%= f.text_field :title, class: "post_form post_title", placeholder: "タイトルを入力" %>
+    </div>  
+
+    <div class="form-group">
+        <%= f.text_area :body, class: "post_form post_content", placeholder: "内容を入力" %>
+    </div> 
+
+  <div>
+      
+      <%= f.attachment_field :image, class: "image_field" %>
+  </div>
+  
+  <div>
+      <%= f.submit "投稿", class: "submit_btn" %>
+  </div>
+  <% end %>
+ </div>
+</div>
+    

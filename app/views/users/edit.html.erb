@@ -1,0 +1,45 @@
+<% if @user.errors.any? %>
+    <h2><%= pluralize(@user.errors.count, "error")%>prohibited this object from being saved: not successfully</h2>
+    <ul>
+      <% @user.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+
+  <div class="container">
+    <div class="left">
+      <h2>ユーザー編集</h2>
+      
+        <%= form_for @user do |f| %>
+        
+          <div class="useredit_field">
+            <%= f.label :username, "ユーザー名", class: "label" %><br />
+            <%= f.text_field :username, class: "entry_field" %>
+          </div>
+
+          <div class="useredit_field">
+            <%= f.label :email, "メールアドレス", class: "label" %><br />
+            <%= f.email_field :email, class: "entry_field" %>
+          </div>
+
+          <div class="useredit_field">
+            <%= f.label :profile, "プロフィール", class: "label" %><br />
+            <%= f.text_area :profile, class: "entry_field_big" %>
+          </div>
+
+          <div class="useredit_field">
+            <%= f.label :profile_image, "プロフィール画像", class: "label" %><br />
+            <%= f.attachment_field :profile_image, class: "input" %>
+          </div>
+          
+          <div class="useredit_btn">
+          <%= f.submit "更新", class: "btn" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
